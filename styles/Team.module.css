@@ -1,21 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+
 .main {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .teamHeading {
   display: flex;
   justify-content: center;
   color: #ff9e44;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin: 2rem auto;
 }
 
 .theTeam {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width: 80%;
+  margin-bottom: 7rem;
 }
 .teamDiv {
   border: 1px solid #ff9e44;
+  width: 300px;
+  height: 300px;
+  /* object-fit: contain; */
+  border-radius: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .theTeam {
+    flex-direction: column;
+  }
+  .teamDiv {
+    margin-top: 1rem;
+  }
 }

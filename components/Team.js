@@ -9,13 +9,13 @@ const Team = () => {
         <h1 className={styles.teamHeading}>The Team</h1>
         <div className={styles.theTeam}>
           <div className={styles.teamDiv}>
-            <Image height={300} width={350} src={teamImg} alt="team image" />
+            <Image height={200} width={200} src={teamImg} alt="team image" />
           </div>
           <div className={styles.teamDiv}>
-            <Image height={300} width={350} src={teamImg} alt="team image" />
+            <Image height={200} width={200} src={teamImg} alt="team image" />
           </div>
           <div className={styles.teamDiv}>
-            <Image height={300} width={350} src={teamImg} alt="team image" />
+            <Image height={200} width={200} src={teamImg} alt="team image" />
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const Footer = () => {
       <div className={styles.footer}>
         <div className={styles.upFooter}>
           <Container>
-            <Row>
+            <Row style={{ marginTop: "100px" }}>
               <Col sm="12" md="4">
                 <div>
                   {/* <h2>Covalent</h2>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 .main {
   /* height: 100vh; */
   width: 100%;
@@ -11,7 +11,8 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   animation: floatImages 4s linear infinite; */
 
-  padding-top: 10px;
+  padding-top: 20px;
+  font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
 }
@@ -58,12 +59,12 @@
 
   /* outline: none; */
 }
-.heroLeft button:hover {
+/* .heroLeft button:hover {
   box-shadow: 1px 1px 4px 2px white;
   -webkit-box-shadow: 1px 1px 8px 2px white;
   -moz-box-shadow: 1px 1px 8px 2px white;
   transition-delay: 0.2s;
-}
+} */
 
 .btn1 {
   background: linear-gradient(to bottom, #563c5c, black);

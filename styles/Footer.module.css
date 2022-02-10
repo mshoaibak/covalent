@@ -1,23 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+
 .footer {
   width: 100%;
   /* height: 70vh; */
   /* position: fixed; */
-  background: linear-gradient(to top, black, #3b2349);
+  background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
   left: 0;
   /* bottom: 0; */
   color: aliceblue;
+  font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* outline: 1px solid red; */
 }
 .h5 {
   color: #ff9e44;
 }
 .upFooter {
-  height: 50vh;
+  height: 30vh;
   border-bottom: 1px solid #ff9e44;
 }
 .downFooter {
   height: 10vh;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* padding-top: 50px; */
 }
 .links {
