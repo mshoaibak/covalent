@@ -43,3 +43,14 @@
   border-left: 1px dashed purple;
   position: absolute;
 }
+
+@media only screen and (max-width: 800px) {
+  .inner {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .inner {
+    width: 25%;
+  }
+}
