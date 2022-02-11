@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const Main = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+  //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   background-color: #3b2349;
   background-image: linear-gradient(to top, black, #3b2349);

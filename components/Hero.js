@@ -7,7 +7,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 const Main = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+  //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   width: 100%;
   background: linear-gradient(to top, black, #3b2349);
