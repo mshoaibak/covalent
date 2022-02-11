@@ -7,6 +7,8 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const Main = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+
   width: 90%;
   height: 10vh;
 
@@ -77,7 +79,7 @@ const Navbar = () => {
   return (
     <>
       <Main>
-        <Logo className={styles.logo}>
+        <Logo>
           <Image src={logo} alt="logo" />
         </Logo>
         <ListContainer>

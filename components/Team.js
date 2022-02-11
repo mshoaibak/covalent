@@ -14,6 +14,8 @@ const H1 = styled.h1`
 `;
 
 const Main = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
+
   width: 100%;
   background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;

@@ -11,6 +11,7 @@ import Link from "next/link";
 import styled from "styled-components";
 const Main = styled.div`
   width: 100%;
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
