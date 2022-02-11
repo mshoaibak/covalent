@@ -84,7 +84,7 @@
   /* background: linear-gradient(93.85deg, #31fe7d 1.88%, #6fb7c2 97.18%); */
 }
 .imgg {
-  width: 100%;
+  /* width: 100%; */
   /* padding: 10px; */
   -webkit-filter: drop-shadow(2px 6px 5px #ff9e44);
   filter: drop-shadow(2px 6px 5px #ff9e44);
@@ -92,13 +92,13 @@
   /* border: none; */
 }
 
-.buttonsDiv {
+/* .buttonsDiv {
   width: 70%;
   margin: auto;
   display: flex;
   justify-content: center;
   padding: 10px;
-}
+} */
 @keyframes floatLeft {
   0% {
     transform: translatey(0px);

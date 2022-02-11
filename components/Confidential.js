@@ -2,33 +2,94 @@ import styles from "../styles/Confidential.module.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { confidential } from "../assets/data/confidential";
 import Image from "next/image";
+import styled from "styled-components";
+import { keyframes } from "styled-components";
+const Main = styled.div`
+  /* height: 100vh; */
+  width: 100%;
+  background: linear-gradient(to top, #3b2349, black);
+  padding-top: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+`;
+const ImageAnimation = keyframes`
+0% {
+    transform: translatey(-20px);
+  }
+  50% {
+    transform: translatey(0px);
+  }
+  100% {
+    transform: translatey(-20px);
+  }
+`;
+const UpperDiv = styled.div`
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+`;
+const H1 = styled.h1`
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3rem;
+`;
+const SpanHead = styled.span`
+  color: #ff9e44;
+`;
+const P = styled.p`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
+const H6 = styled.h6`
+  text-align: center;
+`;
+const ContentParagraph = styled.div`
+  //   display: flex;
+  //   justify-content: center;
+  //   text-align: center;
+  text-align: center;
+`;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  animation-name: ${ImageAnimation};
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+`;
 const Confidential = () => {
   return (
     <>
-      <div className={styles.main}>
-        <div className={styles.upperDiv}>
-          <h1 className={styles.h1}>
+      <Main>
+        <UpperDiv>
+          <H1>
             Your Conversations <br />
-            <span className={styles.spanHead}>Stay Confidential</span>
-          </h1>
-          <p className={styles.p}>
+            <SpanHead>Stay Confidential</SpanHead>
+          </H1>
+          <P>
             No centralized data storage. No privacy issues. No censorship.
             <br />
             You’re the only one who’s able to access and manage your messages.
-          </p>
-        </div>
-        <div className={styles.lowerDiv}>
+          </P>
+        </UpperDiv>
+        <div>
           <Container>
             <Row className="d-flex justify-content-center">
               {confidential.map((val) => {
                 return (
                   <>
                     <Col sm="12" md="3" className="mb-5" id="cols">
-                      <div className={styles.imageWrapper}>
+                      <ImageWrapper>
                         <Image src={val.image} alt="image" />
-                      </div>
-                      <h6 className={styles.h6}>{val.heading}</h6>
-                      <div className={styles.contentParagraph}>{val.info}</div>
+                      </ImageWrapper>
+                      <H6>{val.heading}</H6>
+                      <ContentParagraph>{val.info}</ContentParagraph>
                     </Col>
                   </>
                 );
@@ -36,7 +97,7 @@ const Confidential = () => {
             </Row>
           </Container>
         </div>
-      </div>
+      </Main>
     </>
   );
 };

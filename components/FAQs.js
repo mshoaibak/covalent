@@ -2,6 +2,7 @@ import styles from "../styles/FAQs.module.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faqsData } from "../assets/data/faqsData";
+import styled from "styled-components";
 import {
   faMinus,
   faShevron,
@@ -10,6 +11,45 @@ import {
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 
+const Main = styled.div`
+  min-height: 70vh;
+  width: 100%;
+  background: linear-gradient(to top, black, #3b2349);
+  padding-top: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+`;
+
+const H1 = styled.h1`
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 4rem;
+`;
+
+const Faqs = styled.div`
+  width: 80%;
+
+  margin: 0 auto;
+`;
+const Question = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  cursor: pointer;
+`;
+const QP = styled.p`
+  font-size: 1.2rem;
+  font-weight: bold;
+`;
+const AP = styled.p`
+  font-size: 1rem;
+`;
 const FAQs = () => {
   const [show1, setShow1] = useState(0);
   const [show2, setShow2] = useState(false);
@@ -27,12 +67,12 @@ const FAQs = () => {
 
   return (
     <>
-      <div className={styles.main}>
-        <h1 className={styles.faqHeading}>Frequently asked questions</h1>
-        <div className={styles.faqs}>
+      <Main>
+        <H1>Frequently asked questions</H1>
+        <Faqs>
           <div className={styles.faq}>
-            <div className={styles.question} onClick={handleAnswer1}>
-              <p className={styles.que}>What we offer</p>
+            <Question onClick={handleAnswer1}>
+              <QP>What we offer</QP>
               <FontAwesomeIcon
                 icon={faCaretDown}
                 style={{
@@ -41,18 +81,16 @@ const FAQs = () => {
                   margin: "auto 0",
                 }}
               />
-            </div>
-            <p className={show1 ? styles.showAnswer : styles.hideAnswer}>
+            </Question>
+            <AP className={show1 ? styles.showAnswer : styles.hideAnswer}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam,
-            </p>
+            </AP>
           </div>
-          <div className={styles.faq}>
-            <div className={styles.question} onClick={handleAnswer2}>
-              <p className={styles.que}>
-                How is covalent different from others
-              </p>
+          <div>
+            <Question className={styles.question} onClick={handleAnswer2}>
+              <QP>How is covalent different from others</QP>
               <FontAwesomeIcon
                 icon={faCaretDown}
                 style={{
@@ -61,19 +99,17 @@ const FAQs = () => {
                   margin: "auto 0",
                 }}
               />
-            </div>
+            </Question>
 
-            <p className={show2 ? styles.showAnswer : styles.hideAnswer}>
+            <AP className={show2 ? styles.showAnswer : styles.hideAnswer}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam,
-            </p>
+            </AP>
           </div>
-          <div className={styles.faq}>
-            <div className={styles.question} onClick={handleAnswer3}>
-              <p className={styles.que}>
-                How is covalent different from others
-              </p>
+          <div>
+            <Question onClick={handleAnswer3}>
+              <QP>How is covalent different from others</QP>
               <FontAwesomeIcon
                 icon={faCaretDown}
                 style={{
@@ -82,16 +118,16 @@ const FAQs = () => {
                   margin: "auto 0",
                 }}
               />
-            </div>
+            </Question>
 
-            <p className={show3 ? styles.showAnswer : styles.hideAnswer}>
+            <AP className={show3 ? styles.showAnswer : styles.hideAnswer}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam,
-            </p>
+            </AP>
           </div>
-        </div>
-      </div>
+        </Faqs>
+      </Main>
     </>
   );
 };
