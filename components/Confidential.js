@@ -1,4 +1,4 @@
-import styles from "../styles/Confidential.module.css";
+// import styles from "../styles/Confidential.module.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { confidential } from "../assets/data/confidential";
 import Image from "next/image";
@@ -83,10 +83,10 @@ const Confidential = () => {
         <div>
           <Container>
             <Row className="d-flex justify-content-center">
-              {confidential.map((val) => {
+              {confidential.map((val, indx) => {
                 return (
                   <>
-                    <Col sm="12" md="3" className="mb-5" id="cols">
+                    <Col key={indx} sm="12" md="3" className="mb-5" id="cols">
                       <ImageWrapper>
                         <Image src={val.image} alt="image" />
                       </ImageWrapper>

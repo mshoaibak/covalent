@@ -1,15 +1,20 @@
-import styles from "../styles/FAQs.module.css";
+// import styles from "../styles/FAQs.module.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faqsData } from "../assets/data/faqsData";
 import styled from "styled-components";
-import {
-  faMinus,
-  faShevron,
-  faDown,
-  faShevrondown,
-  faCaretDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { keyframes } from "styled-components";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+
+const fadeAnimation = keyframes`
+0% {
+  transform: translateY(-20px);
+}
+
+100% {
+  transform: translateY(0px);
+}
+`;
 
 const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
@@ -50,12 +55,20 @@ const QP = styled.p`
   font-weight: bold;
 `;
 const AP = styled.p`
+  display: ${({ show }) => (show ? "block" : "none")};
+  padding: 0 20px;
+  animation: ${fadeAnimation};
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  font-size: 1rem;
+  color: #ff9e44;
   font-size: 1rem;
 `;
 const FAQs = () => {
-  const [show1, setShow1] = useState(0);
-  const [show2, setShow2] = useState(false);
-  const [show3, setShow3] = useState(false);
+  // const [show1, setShow1] = useState(0);
+  // const [show2, setShow2] = useState(false);
+  // const [show3, setShow3] = useState(false);
+  const [show, setShow] = useState(0);
 
   const handleAnswer1 = (ind) => {
     show1 ? setShow1(null) : setShow1(ind);
@@ -66,50 +79,42 @@ const FAQs = () => {
   const handleAnswer3 = () => {
     show3 ? setShow3(false) : setShow3(true);
   };
-
+  const handleAnswer = (v) => {
+    console.log(v);
+    show === v ? setShow(0) : setShow(v);
+  };
+  // console.log(show);
   return (
     <>
       <Main>
         <H1>Frequently asked questions</H1>
         <Faqs>
-          <div className={styles.faq}>
-            <Question onClick={handleAnswer1}>
-              <QP>What we offer</QP>
-              <FontAwesomeIcon
-                icon={faCaretDown}
-                style={{
-                  fontSize: 20,
-                  color: "#ff9e44",
-                  margin: "auto 0",
-                }}
-              />
-            </Question>
-            <AP className={show1 ? styles.showAnswer : styles.hideAnswer}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </AP>
-          </div>
-          <div>
-            <Question className={styles.question} onClick={handleAnswer2}>
-              <QP>How is covalent different from others</QP>
-              <FontAwesomeIcon
-                icon={faCaretDown}
-                style={{
-                  fontSize: 20,
-                  color: "#ff9e44",
-                  margin: "auto 0",
-                }}
-              />
-            </Question>
+          {faqsData.map((val, indx) => {
+            return (
+              <>
+                <div key={indx}>
+                  <Question
+                    onClick={() => {
+                      handleAnswer(val.id);
+                    }}
+                  >
+                    <QP>{val.question}</QP>
+                    <FontAwesomeIcon
+                      icon={faCaretDown}
+                      style={{
+                        fontSize: 20,
+                        color: "#ff9e44",
+                        margin: "auto 0",
+                      }}
+                    />
+                  </Question>
+                  {show === val.id ? <AP show={show}>{val.answer}</AP> : ""}
+                </div>
+              </>
+            );
+          })}
 
-            <AP className={show2 ? styles.showAnswer : styles.hideAnswer}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </AP>
-          </div>
-          <div>
+          {/* <div>
             <Question onClick={handleAnswer3}>
               <QP>How is covalent different from others</QP>
               <FontAwesomeIcon
@@ -122,12 +127,12 @@ const FAQs = () => {
               />
             </Question>
 
-            <AP className={show3 ? styles.showAnswer : styles.hideAnswer}>
+            <AP show3={show3}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam,
             </AP>
-          </div>
+          </div> */}
         </Faqs>
       </Main>
     </>

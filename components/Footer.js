@@ -1,5 +1,5 @@
 import { Row, Col, Container } from "react-bootstrap";
-import styles from "../styles/Footer.module.css";
+// import styles from "../styles/Footer.module.css";
 import {
   faPhone,
   faEnvelope,
@@ -20,18 +20,23 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
+  //   padding: 48px 24px;
 `;
 const UPFooter = styled.div`
-  height: 30vh;
+  //   height: 30vh;
   border-bottom: 1px solid #ff9e44;
+  padding: 48px 16px;
+  width: 90%;
+  margin: auto;
 `;
 
 const DownFooter = styled.div`
-  height: 10vh;
-  text-align: center;
+  //   height: 10vh;
+  //   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px;
 `;
 
 const Links = styled.div`
@@ -39,6 +44,7 @@ const Links = styled.div`
   justify-content: center;
   flex-direction: column;
   text-decoration: none;
+  color: #ff9e44;
 `;
 const Anchor = styled.a`
   text-decoration: none;
@@ -49,7 +55,7 @@ const Anchor = styled.a`
 `;
 
 const H5 = styled.h5`
-  color: #ff9e44;
+  color: white;
 `;
 const Footer = () => {
   return (
@@ -58,11 +64,11 @@ const Footer = () => {
         <UPFooter>
           <Container>
             <Row style={{ marginTop: "100px" }}>
-              <Col sm="12" md="4">
+              <Col sm="12" md="3">
                 <div>
                   <H5>Contact Us</H5>
                   <div styles={{ display: "flex", flexDirection: "column" }}>
-                    <div style={{ marginBottom: "10px" }}>
+                    <div style={{ marginBottom: "10px", color: "#ff9e44" }}>
                       <FontAwesomeIcon
                         icon={faPhone}
                         style={{
@@ -73,7 +79,7 @@ const Footer = () => {
                       />
                       +929999999
                     </div>
-                    <div>
+                    <div style={{ color: "#ff9e44" }}>
                       <FontAwesomeIcon
                         icon={faEnvelope}
                         style={{
@@ -87,7 +93,7 @@ const Footer = () => {
                   </div>
                 </div>
               </Col>
-              <Col sm="12" md="4">
+              <Col sm="12" md="3">
                 <H5>Information</H5>
                 <Links>
                   <Link href="/about">
@@ -101,7 +107,7 @@ const Footer = () => {
                   </Link> */}
                 </Links>
               </Col>
-              {/* <Col sm="12" md="4">
+              <Col sm="12" md="3">
                 <H5>Follow</H5>
                 <Links>
                   <Link href="/">
@@ -114,7 +120,21 @@ const Footer = () => {
                     <Anchor> Facebook</Anchor>
                   </Link>
                 </Links>
-              </Col> */}
+              </Col>
+              <Col sm="12" md="3">
+                <H5>Follow</H5>
+                <Links>
+                  <Link href="/">
+                    <Anchor> Twitter</Anchor>
+                  </Link>
+                  <Link href="/">
+                    <Anchor> Discord</Anchor>
+                  </Link>
+                  <Link href="/">
+                    <Anchor> Facebook</Anchor>
+                  </Link>
+                </Links>
+              </Col>
             </Row>
           </Container>
         </UPFooter>

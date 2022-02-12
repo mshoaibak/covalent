@@ -1,4 +1,4 @@
-import styles from "../styles/Hero.module.css";
+// import styles from "../styles/Hero.module.css";
 import Navbar from "./Navbar";
 import rightImage from "../assets/images/layers.svg";
 import covalent from "../assets/images/covalent.png";

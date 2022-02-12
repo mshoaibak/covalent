@@ -1,4 +1,3 @@
-import styles from "../styles/Navbar.module.css";
 import logo from "../assets/images/logo.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,9 +53,47 @@ const List = styled.ul`
     font-weight: bold;
     letter-spacing: 1px;
   }
-
+  .listBorder,
+  .listBorder > span {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    line-height: 1vh;
+  }
+  .listBorder:before,
+  .listBorder:after,
+  .listBorder > span:before,
+  .listBorder > span:after {
+    content: "";
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+  .listBorder {
+    padding-top: 20px;
+    color: #ff9e44 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+  .listBorder:before {
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background: #ff9e44;
+    transform: scaleX(0);
+  }
+  .listBorder:hover:before {
+    transform: scaleX(1);
+    bottom: -10px;
+  }
   @media (max-width: 900px) {
     display: ${({ yes }) => (yes ? "block" : "none")};
+    .listBorder::after {
+      content: none;
+    }
+    .listBorder::before {
+      content: none;
+    }
   }
 `;
 const Toggle = styled.div`
@@ -83,14 +120,14 @@ const Navbar = () => {
         </Logo>
         <ListContainer>
           <List yes={yes}>
-            <li className={styles.listBorder}>Pitch deck</li>
-            <li className={styles.listBorder}>Core Features</li>
-            <li className={styles.listBorder}> Comparison</li>
-            <li className={styles.listBorder}>Team</li>
-            <li className={styles.listBorder}>Advisors</li>
+            <li className="listBorder">Pitch deck</li>
+            <li className="listBorder">Core Features</li>
+            <li className="listBorder"> Comparison</li>
+            <li className="listBorder">Team</li>
+            <li className="listBorder">Advisors</li>
           </List>
         </ListContainer>
-        <Toggle className={styles.toggle}>
+        <Toggle>
           <FontAwesomeIcon onClick={handle} icon={faBars} />
         </Toggle>
       </Main>
