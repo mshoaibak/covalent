@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
@@ -18,7 +19,7 @@ const Main = styled.div`
   margin: 10px auto;
   padding: 10px;
   //   z-index: 10;
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
@@ -123,8 +124,14 @@ const Navbar = () => {
             <li className="listBorder">Pitch deck</li>
             <li className="listBorder">Core Features</li>
             <li className="listBorder"> Comparison</li>
-            <li className="listBorder">Team</li>
-            <li className="listBorder">Advisors</li>
+            <Link href="#team" passHref>
+              <li className="listBorder">
+                <a>Team</a>
+              </li>
+            </Link>
+            <li className="listBorder">
+              <a>Advisors</a>
+            </li>
           </List>
         </ListContainer>
         <Toggle>

@@ -17,7 +17,14 @@ const Main = styled.div`
     // height: auto;
   }
 `;
-
+const H1 = styled.h1`
+  text-align: center;
+  padding: 10px 0;
+  font-size: 3rem;
+  color: #ff9e44;
+  font-weight: bold;
+  letter-spacing: 1px;
+`;
 const Maps = styled.div`
   width: 100%;
   height: 100%;
@@ -48,6 +55,7 @@ const Roadmap = () => {
   return (
     <>
       <Main>
+        <H1>Roadmap</H1>
         <Maps>
           <Inner>
             <h4>Q4</h4>

@@ -8,13 +8,14 @@ import Navbar from "./Navbar";
 const Layout = ({ children }) => {
   return (
     <>
-      <Hero />
       {/* <Navbar /> */}
+      {/* <Hero />
+    
       <Team />
       <FAQs />
       <Confidential />
       <Roadmap />
-      <Footer />
+      <Footer /> */}
       {/* {children} */}
     </>
   );

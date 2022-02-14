@@ -9,7 +9,7 @@ const Main = styled.div`
 
   /* height: 100vh; */
   width: 100%;
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   padding-top: 10px;
   color: white;
   display: flex;
@@ -38,6 +38,7 @@ const H1 = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   font-size: 3rem;
+  font-weight: bold;
 `;
 const SpanHead = styled.span`
   color: #ff9e44;

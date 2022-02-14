@@ -17,7 +17,7 @@ const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   width: 100%;
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   padding-top: 10px;
   color: white;
   display: flex;
@@ -57,7 +57,7 @@ const Person = styled.div`
 const Team = () => {
   return (
     <>
-      <Main>
+      <Main id="team">
         <H1>The Team</H1>
         <TheTeam>
           <Person>
