@@ -11,6 +11,7 @@ import styled from "styled-components";
 const H1 = styled.h1`
   display: flex;
   justify-content: center;
+  padding: 40px 0;
   color: #ff9e44;
   font-size: 3rem;
   letter-spacing: 1px;
@@ -60,6 +61,7 @@ const Person = styled.div`
   align-items: center;
   flex-direction: column;
   contain: content;
+  font-size: 1.5rem;
   @media (max-width: 768px) {
     margin-top: 1rem;
   }

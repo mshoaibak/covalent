@@ -8,14 +8,16 @@ export const faqsData = [
   {
     id: 2,
 
-    question: "How are we different from others and how do we work",
+    question:
+      "How are we different from others and how do we work,what are our methods",
     answer:
       "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam",
   },
   {
     id: 3,
 
-    question: "How are we different from others and how do we work",
+    question:
+      "How are we different from others and how do we work, what are our methods",
     answer:
       "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam",
   },
@@ -29,7 +31,8 @@ export const faqsData = [
   {
     id: 5,
 
-    question: "How are we different from others and how do we work",
+    question:
+      "How are we different from others and how do we work, what are our methods",
     answer:
       "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam",
   },

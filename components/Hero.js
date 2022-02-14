@@ -88,6 +88,7 @@ const Button1 = styled.button`
   color: white;
   cursor: pointer;
   margin: 5px 5px;
+  font-size: 1.2rem;
 
   background: linear-gradient(to bottom, #563c5c, black);
   box-shadow: 0px 8px 10px rgb(177, 72, 222, 0.35);
@@ -106,6 +107,11 @@ const Button2 = styled.button`
   background: transparent;
   box-shadow: 0px 8px 10px rgb(177, 72, 222, 0.35);
   outline: 2px solid #ff9e44;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
   @media (max-width: 768px) {
     width: 70%;
   }
@@ -162,10 +168,10 @@ const Hero = () => {
             <ButtonContainer>
               <Button1>Join</Button1>
               <Button2>
-                {/* <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
+                <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
                   Litepaper
-                </a> */}
-                Litepaper
+                </a>
+                {/* Litepaper */}
               </Button2>
             </ButtonContainer>
           </HeroLeft>
