@@ -23,7 +23,7 @@ const Main = styled.div`
 
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to top, black, #3b2349);
+  background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
   color: white;
   display: flex;
@@ -56,7 +56,7 @@ const Person = styled.div`
   /* object-fit: contain; */
   // border-radius: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   contain: content;

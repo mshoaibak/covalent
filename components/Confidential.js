@@ -9,7 +9,7 @@ const Main = styled.div`
 
   /* height: 100vh; */
   width: 100%;
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   padding-top: 10px;
   color: white;
   display: flex;

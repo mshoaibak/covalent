@@ -11,7 +11,7 @@ const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   width: 100%;
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   padding-top: 20px;
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
@@ -162,9 +162,10 @@ const Hero = () => {
             <ButtonContainer>
               <Button1>Join</Button1>
               <Button2>
-                <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
+                {/* <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
                   Litepaper
-                </a>
+                </a> */}
+                Litepaper
               </Button2>
             </ButtonContainer>
           </HeroLeft>

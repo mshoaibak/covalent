@@ -172,7 +172,7 @@ const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
   min-height: 70vh;
   width: 100%;
-  background: linear-gradient(to top, black, #3b2349);
+  background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
   color: white;
   display: flex;

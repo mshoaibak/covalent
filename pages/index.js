@@ -22,14 +22,16 @@ export default function Home() {
       <main>
         <Hero />
         {/* <Navbar /> */}
-        <FAQs />
-        <Coverage />
+        {/* <FAQs /> */}
+        {/* <Coverage /> */}
         <Team />
 
         <Confidential />
         <Mention />
 
         <Milestones />
+        <FAQs />
+
         {/* <Roadmap /> */}
         <Footer />
       </main>

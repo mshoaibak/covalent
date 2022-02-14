@@ -16,7 +16,7 @@ const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   background-color: #3b2349;
-  background-image: linear-gradient(to top, black, #3b2349);
+  background-image: linear-gradient(to top, #3b2349, black);
 
   //   height: 100vh;
   min-height: 100vh;
@@ -49,7 +49,7 @@ const H1 = styled.h1`
 const Mention1 = styled.div`
   width: 50%;
   height: 400px;
-  margin: 0 auto;
+  margin: 50px auto;
   overflow: auto;
   overflow: ${({ scroll }) => (scroll ? "auto" : "hidden")};
 `;
@@ -99,7 +99,7 @@ const Mention = () => {
           })}
         </Mention1>
         <Button onClick={() => (scroll ? setScroll(false) : setScroll(true))}>
-          <See>SEE MORE</See>
+          <See>{!scroll ? "SEE MORE" : "SEE LESS"}</See>
         </Button>
       </Main>
     </>

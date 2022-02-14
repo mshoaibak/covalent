@@ -6,7 +6,7 @@ const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
   background-color: #3b2349;
-  background-image: linear-gradient(to top, #3b2349, black);
+  background-image: linear-gradient(to top, black, #3b2349);
 
   //   height: 100vh;
   min-height: 100vh;
