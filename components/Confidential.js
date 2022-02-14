@@ -9,7 +9,7 @@ const Main = styled.div`
 
   /* height: 100vh; */
   width: 100%;
-  background: linear-gradient(to top, black, #3b2349);
+  background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
   color: white;
   display: flex;
@@ -18,6 +18,7 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
+  // border: 1px solid red;
 `;
 const ImageAnimation = keyframes`
 0% {
@@ -38,7 +39,7 @@ const H1 = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   font-size: 3rem;
-  font-weight: bold;
+  // font-weight: bold;
 `;
 const SpanHead = styled.span`
   color: #ff9e44;
@@ -72,8 +73,8 @@ const Confidential = () => {
       <Main>
         <UpperDiv>
           <H1>
-            Your Conversations <br />
-            <SpanHead>Stay Confidential</SpanHead>
+            YOUR CONVERSATIONS <br />
+            <SpanHead>STAY CONFIDENTIAL</SpanHead>
           </H1>
           <P>
             No centralized data storage. No privacy issues. No censorship.

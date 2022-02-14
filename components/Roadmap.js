@@ -19,7 +19,7 @@ const Main = styled.div`
 `;
 const H1 = styled.h1`
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   font-size: 3rem;
   color: #ff9e44;
   font-weight: bold;

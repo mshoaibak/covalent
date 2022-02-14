@@ -13,7 +13,7 @@ const Main = styled.div`
   width: 100%;
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   padding-top: 10px;
   left: 0;
   color: aliceblue;
@@ -45,6 +45,7 @@ const Links = styled.div`
   flex-direction: column;
   text-decoration: none;
   color: #ff9e44;
+  cursor: pointer;
 `;
 const Anchor = styled.a`
   text-decoration: none;
@@ -96,7 +97,7 @@ const Footer = () => {
               <Col sm="12" md="3">
                 <H5>Information</H5>
                 <Links>
-                  <Link href="/about">
+                  <Link href="/">
                     <Anchor> About Us</Anchor>
                   </Link>
                   <Link href="/">

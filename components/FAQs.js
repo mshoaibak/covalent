@@ -172,7 +172,7 @@ const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
   min-height: 70vh;
   width: 100%;
-  background: linear-gradient(to top, #3b2349, black);
+  background: linear-gradient(to top, black, #3b2349);
   padding-top: 10px;
   color: white;
   display: flex;
@@ -181,6 +181,7 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
+  // border: 1px solid yellow;
 `;
 
 const H1 = styled.h1`
@@ -188,6 +189,7 @@ const H1 = styled.h1`
   font-size: 3rem;
   letter-spacing: 1px;
   margin-bottom: 4rem;
+  // font-weight: bold;
 `;
 
 const Faqs = styled.div`
@@ -237,7 +239,7 @@ const FAQs = () => {
   return (
     <>
       <Main>
-        <H1>Frequently asked questions</H1>
+        <H1>FREQUENTLY ASKED QUESTIONS</H1>
         <Faqs>
           {faqsData.map((val, indx) => {
             return (

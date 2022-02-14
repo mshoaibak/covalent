@@ -88,6 +88,7 @@ const Button1 = styled.button`
   color: white;
   cursor: pointer;
   margin: 5px 5px;
+
   background: linear-gradient(to bottom, #563c5c, black);
   box-shadow: 0px 8px 10px rgb(177, 72, 222, 0.35);
   @media (max-width: 768px) {
@@ -160,7 +161,11 @@ const Hero = () => {
             {/* </div> */}
             <ButtonContainer>
               <Button1>Join</Button1>
-              <Button2>Litepaper</Button2>
+              <Button2>
+                <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
+                  Litepaper
+                </a>
+              </Button2>
             </ButtonContainer>
           </HeroLeft>
           <HeroRight>

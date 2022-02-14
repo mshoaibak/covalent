@@ -53,6 +53,7 @@ const List = styled.ul`
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
+    caret-color: transparent;
   }
   .listBorder,
   .listBorder > span {
@@ -126,7 +127,7 @@ const Navbar = () => {
             <li className="listBorder"> Comparison</li>
             <Link href="#team" passHref>
               <li className="listBorder">
-                <a>Team</a>
+                <a>Venture</a>
               </li>
             </Link>
             <li className="listBorder">

@@ -8,6 +8,8 @@ import Confidential from "../components/Confidential";
 import Roadmap from "../components/Roadmap";
 import Footer from "../components/Footer";
 import Milestones from "../components/Milestones";
+import Coverage from "../components/Coverage";
+import Mention from "../components/Mention";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -20,11 +22,15 @@ export default function Home() {
       <main>
         <Hero />
         {/* <Navbar /> */}
-        <Team />
         <FAQs />
+        <Coverage />
+        <Team />
+
         <Confidential />
+        <Mention />
+
         <Milestones />
-        <Roadmap />
+        {/* <Roadmap /> */}
         <Footer />
       </main>
     </div>
