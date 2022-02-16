@@ -9,7 +9,7 @@ export const mentions = [
   {
     heading: "OTC trading",
     image: amb,
-    info: "Trade over-the-counter (OTC) crypto assets and tokens P2P via an integrated ESC (escrow smart contract) functionality.",
+    info: "Trade over-the counter (OTC) crypto assets and tokens P2P via an integrated ESC (escrow smart contract) functionality.",
   },
   {
     heading: "Safe investment",

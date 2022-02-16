@@ -23,7 +23,7 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
-  @media (max-width: 900px) {
+  @media (max-width: 912px) {
     height: auto;
     width: 100%;
     border-radius: 0px;
@@ -33,12 +33,17 @@ const Main = styled.div`
 
 const Logo = styled.div`
   width: 20%;
+  // height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  // font-weight: bold;
   letter-spacing: 2px;
   font-size: 2rem;
+  @media (max-width: 900px) {
+    height: 50px;
+    width: 40%;
+  }
 `;
 const ListContainer = styled.div`
   width: 70%;
@@ -54,6 +59,10 @@ const List = styled.ul`
     font-weight: bold;
     letter-spacing: 1px;
     caret-color: transparent;
+    a {
+      text-decoration: none;
+      color: #ff9e44;
+    }
   }
   .listBorder,
   .listBorder > span {
@@ -90,6 +99,7 @@ const List = styled.ul`
   }
   @media (max-width: 900px) {
     display: ${({ yes }) => (yes ? "block" : "none")};
+    text-align: right;
     .listBorder::after {
       content: none;
     }
@@ -122,8 +132,18 @@ const Navbar = () => {
         </Logo>
         <ListContainer>
           <List yes={yes}>
-            <li className="listBorder">Pitch deck</li>
-            <li className="listBorder">Core Features</li>
+            {/* <Link> */}
+            <li className="listBorder">
+              <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
+                Pitch Deck
+              </a>
+            </li>
+            {/* </Link> */}
+            <Link href="#corefeatures" passHref>
+              <li className="listBorder">
+                <a>Core Features</a>
+              </li>
+            </Link>
             <li className="listBorder"> Comparison</li>
             <Link href="#team" passHref>
               <li className="listBorder">

@@ -7,10 +7,10 @@ import { keyframes } from "styled-components";
 const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
-  /* height: 100vh; */
   width: 100%;
   background: linear-gradient(to top, black, #3b2349);
   padding-top: 10px;
+  margin: -1px 0;
   color: white;
   display: flex;
   justify-content: center;
@@ -18,8 +18,8 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
-  // border: 1px solid red;
 `;
+
 const ImageAnimation = keyframes`
 0% {
     transform: translatey(-20px);
@@ -39,7 +39,6 @@ const H1 = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   font-size: 3rem;
-  // font-weight: bold;
 `;
 const SpanHead = styled.span`
   color: #ff9e44;
@@ -48,21 +47,32 @@ const P = styled.p`
   display: flex;
   justify-content: center;
   text-align: center;
+  @media (max-width: 768px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
-const H6 = styled.h6`
+const H4 = styled.h4`
   text-align: center;
+  color: #ff9e44;
 `;
 const ContentParagraph = styled.div`
-  //   display: flex;
-  //   justify-content: center;
-  //   text-align: center;
   text-align: center;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    // width: 70%;
+  }
+  @media (max-width: 667px) {
+    width: 70%;
+  }
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   animation-name: ${ImageAnimation};
+  filter: opacity(0.5) drop-shadow(0 0 0 gold);
+
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -70,11 +80,11 @@ const ImageWrapper = styled.div`
 const Confidential = () => {
   return (
     <>
-      <Main>
+      <Main id="corefeatures">
         <UpperDiv>
           <H1>
-            YOUR CONVERSATIONS <br />
-            <SpanHead>STAY CONFIDENTIAL</SpanHead>
+            CORE <br />
+            <SpanHead>FEATURES</SpanHead>
           </H1>
           <P>
             No centralized data storage. No privacy issues. No censorship.
@@ -84,15 +94,20 @@ const Confidential = () => {
         </UpperDiv>
         <div>
           <Container>
-            <Row className="d-flex justify-content-center">
+            <Row className="">
               {confidential.map((val, indx) => {
                 return (
                   <>
-                    <Col key={indx} sm="12" md="3" className="mb-5" id="cols">
+                    <Col key={indx} sm="12" md="4" className="mb-5" id="cols">
                       <ImageWrapper>
-                        <Image src={val.image} alt="image" />
+                        <Image
+                          width={70}
+                          height={70}
+                          src={val.image}
+                          alt="image"
+                        />
                       </ImageWrapper>
-                      <H6>{val.heading}</H6>
+                      <H4>{val.heading}</H4>
                       <ContentParagraph>{val.info}</ContentParagraph>
                     </Col>
                   </>

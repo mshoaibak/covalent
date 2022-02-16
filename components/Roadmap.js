@@ -9,7 +9,7 @@ const Main = styled.div`
   /* border: 1px solid yellow; */
   text-align: center;
   color: white;
-
+  // margin: -8px 0;
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;

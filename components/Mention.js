@@ -8,41 +8,27 @@ import coin from "../assets/images/coin.png";
 import finance from "../assets/images/finance.png";
 import zcrypto from "../assets/images/zcrypto.png";
 import bitcoin from "../assets/images/bitcoin.png";
-// import { mentions } from "../assets/data/mentions";
 import { mentions } from "../assets/data/mentions";
 import { useState } from "react";
 
 const Main = styled.div`
-  //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
-
   background-color: #3b2349;
   background-image: linear-gradient(to top, #3b2349, black);
-
-  //   height: 100vh;
   min-height: 100vh;
-  //   border: 1px solid green;
-
+  margin: 0;
   text-align: center;
   color: white;
-  //   border: 1px solid yellow;
   padding-bottom: 50px;
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
-  @media (max-width: 900px) {
-    // height: auto;
-  }
 `;
 
 const H1 = styled.h1`
   text-align: center;
-  padding: 80px 0;
-  //   padding-bottom: 10px
+  padding: 70px 0;
   font-size: 3rem;
   color: #ff9e44;
-  //   color: ${({ color }) => color};
-
-  //   font-weight: bold;
   letter-spacing: 1px;
 `;
 
@@ -52,6 +38,12 @@ const Mention1 = styled.div`
   margin: 50px auto;
   overflow: auto;
   overflow: ${({ scroll }) => (scroll ? "auto" : "hidden")};
+  @media (max-width: 400px) {
+    height: 450px;
+  }
+  @media (max-width: 280px) {
+    height: 500px;
+  }
 `;
 const H6 = styled.h6`
   font-weight: bold;
@@ -69,12 +61,12 @@ const Button = styled.button`
   box-shadow: 0px 8px 10px rgb(177, 72, 222, 0.35);
   outline: 2px solid #ff9e44;
   margin: 10px 0;
-  button:focus {
+  &:active {
     outline: 2px solid #ff9e44;
   }
 
   @media (max-width: 768px) {
-    width: 70%;
+    width: 50%;
   }
 `;
 
@@ -87,13 +79,15 @@ const Mention = () => {
   return (
     <>
       <Main>
-        <H1>WE ARE MENTIONED</H1>
+        <H1>EXCLUSIVE COVERAGE</H1>
         <Mention1 scroll={scroll}>
           {mentions.map((val) => {
             return (
               <>
-                <H6>{val.info}</H6>
-                <Image src={val.image} alt="mention-image" />
+                <div style={{ margin: "40px 0" }}>
+                  <H6>{val.info}</H6>
+                  <Image src={val.image} alt="mention-image" />
+                </div>
               </>
             );
           })}

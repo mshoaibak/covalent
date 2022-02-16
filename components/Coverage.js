@@ -14,6 +14,8 @@ const Main = styled.div`
   background-color: #3b2349;
   background-image: linear-gradient(to top, #3b2349, black);
   width: 100%;
+  margin: -1px 0;
+
   //   min-height: 100vh;
   min-height: 100vh;
   /* border: 1px solid yellow; */
@@ -49,69 +51,26 @@ const H1 = styled.h1`
   //   font-weight: bold;
   letter-spacing: 1px;
 `;
-const HK = styled.h1`
-  text-align: center;
-  //   padding: 10px 0;
-  font-size: 3rem;
-  //   color: #ff9e44;
-  color: ${({ color }) => color};
 
-  //   font-weight: bold;
-  top: 450%;
-  letter-spacing: 1px;
-`;
-const Inner = styled.div`
-  //   width: 80%;
-  height: 80vh;
-  //   border: 1px solid yellow;
-  //   border-left: 2px dashed #ff9e44;
-  padding: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  //   @media (max-width: 800) {
-  //     width: 29%;
-  //   }
-  //   @media (max-width: 800px) {
-  //     width: 25%;
-  //   }
-`;
-
-const Bottom = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  //   border: 1px solid red;
-  position: absolute;
-  top: 430%;
-  width: 100%;
-  @media (max-width: 900px) {
-    top: 560%;
-  }
-`;
 const FirstImg = styled.div`
-  //   border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
 `;
 const SecondImg = styled.div`
-  //   border: 1px solid green;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 10px 0;
 `;
 const ThirdImg = styled.div`
-  //   border: 1px solid green;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 10px 0;
 `;
 const FourthImg = styled.div`
-  //   border: 1px solid green;
   display: flex;
   justify-content: center;
   align-items: center;

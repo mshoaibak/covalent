@@ -11,19 +11,17 @@ import styled from "styled-components";
 const H1 = styled.h1`
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding-top: 50px;
+  margin-bottom: 40px;
   color: #ff9e44;
   font-size: 3rem;
   letter-spacing: 1px;
   margin: 2rem auto;
-  // font-weight: bold;
 `;
 
 const Main = styled.div`
-  //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
-
   width: 100%;
-  height: 100vh;
+  margin: -5px 0;
   background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
   color: white;
@@ -34,7 +32,6 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
-  // border: 1px solid white;
 `;
 
 const TheTeam = styled.div`
@@ -50,12 +47,9 @@ const TheTeam = styled.div`
 `;
 
 const Person = styled.div`
-  // border: 1px solid #ff9e44;
   width: 270px;
   height: 270px;
   max-width: 100%;
-  /* object-fit: contain; */
-  // border-radius: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +64,7 @@ const Team = () => {
   return (
     <>
       <Main id="team">
-        <H1>VENTURE</H1>
+        <H1> VENTURE</H1>
         <TheTeam>
           <Person>
             <Image height={200} width={200} src={haider} alt="team image" />

@@ -170,10 +170,11 @@ const fadeAnimation = keyframes`
 
 const Main = styled.div`
   //   @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
-  min-height: 70vh;
+  // min-height: 70vh;
   width: 100%;
   background: linear-gradient(to top, #3b2349, black);
   padding-top: 10px;
+  margin: -15px 0;
   color: white;
   display: flex;
   justify-content: center;
@@ -188,8 +189,12 @@ const H1 = styled.h1`
   text-align: center;
   font-size: 3rem;
   letter-spacing: 1px;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   // font-weight: bold;
+  @media (max-width: 280px) {
+    letter-spacing: 0;
+    font-size: 2rem;
+  }
 `;
 
 const Faqs = styled.div`
@@ -205,6 +210,9 @@ const Question = styled.div`
 const QP = styled.p`
   font-size: 1.2rem;
   font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 const AP = styled.p`
   display: ${({ show }) => (show ? "block" : "none")};
@@ -222,15 +230,6 @@ const FAQs = () => {
   // const [show3, setShow3] = useState(false);
   const [show, setShow] = useState(0);
 
-  const handleAnswer1 = (ind) => {
-    show1 ? setShow1(null) : setShow1(ind);
-  };
-  const handleAnswer2 = () => {
-    show2 ? setShow2(false) : setShow2(true);
-  };
-  const handleAnswer3 = () => {
-    show3 ? setShow3(false) : setShow3(true);
-  };
   const handleAnswer = (v) => {
     console.log(v);
     show === v ? setShow(0) : setShow(v);
@@ -238,8 +237,8 @@ const FAQs = () => {
   // console.log(show);
   return (
     <>
-      <Main>
-        <H1>FREQUENTLY ASKED QUESTIONS</H1>
+      <Main id="faqs">
+        <H1>FAQs</H1>
         <Faqs>
           {faqsData.map((val, indx) => {
             return (
