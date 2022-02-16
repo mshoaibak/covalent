@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
-import VV from "../assets/images/vvc.SVG";
+import VV from "../assets/images/vvc.svg";
 import altcoin from "../assets/images/altcoin.png";
 import amb from "../assets/images/amb.png";
 import btc from "../assets/images/btc.png";

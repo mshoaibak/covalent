@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
-import VV from "../assets/images/neww.PNG";
+import VV from "../assets/images/neww.png";
 // import VV from "../assets/images/pkr.PNG";
 // import VV from "../assets/images/kj.PNG";
 
