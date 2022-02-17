@@ -97,20 +97,18 @@ const Confidential = () => {
             <Row className="">
               {confidential.map((val, indx) => {
                 return (
-                  <>
-                    <Col key={indx} sm="12" md="4" className="mb-5" id="cols">
-                      <ImageWrapper>
-                        <Image
-                          width={70}
-                          height={70}
-                          src={val.image}
-                          alt="image"
-                        />
-                      </ImageWrapper>
-                      <H4>{val.heading}</H4>
-                      <ContentParagraph>{val.info}</ContentParagraph>
-                    </Col>
-                  </>
+                  <Col key={indx} sm="12" md="4" className="mb-5" id="cols">
+                    <ImageWrapper>
+                      <Image
+                        width={70}
+                        height={70}
+                        src={val.image}
+                        alt="image"
+                      />
+                    </ImageWrapper>
+                    <H4>{val.heading}</H4>
+                    <ContentParagraph>{val.info}</ContentParagraph>
+                  </Col>
                 );
               })}
             </Row>

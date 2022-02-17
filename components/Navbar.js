@@ -1,7 +1,7 @@
 import logo from "../assets/images/logo.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
@@ -33,11 +33,9 @@ const Main = styled.div`
 
 const Logo = styled.div`
   width: 20%;
-  // height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // font-weight: bold;
   letter-spacing: 2px;
   font-size: 2rem;
   @media (max-width: 900px) {
@@ -49,11 +47,15 @@ const ListContainer = styled.div`
   width: 70%;
 `;
 const List = styled.ul`
+  margin-right: none;
+  position: relative;
   z-index: 1000;
 
+  height: 5vh;
   display: ${({ yes }) => (yes ? "block" : "flex")};
   justify-content: space-evenly;
   li {
+    margin: 0;
     list-style-type: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -63,6 +65,10 @@ const List = styled.ul`
       text-decoration: none;
       color: #ff9e44;
     }
+  }
+
+  .more {
+    border: none;
   }
   .listBorder,
   .listBorder > span {
@@ -80,10 +86,12 @@ const List = styled.ul`
     transition: transform 0.3s ease;
   }
   .listBorder {
+    vertical-align: top;
     padding-top: 20px;
     color: #ff9e44 !important;
     text-decoration: none !important;
     cursor: pointer;
+    margin: 0;
   }
   .listBorder:before {
     left: 0;
@@ -99,6 +107,7 @@ const List = styled.ul`
   }
   @media (max-width: 900px) {
     display: ${({ yes }) => (yes ? "block" : "none")};
+    height: auto;
     text-align: right;
     .listBorder::after {
       content: none;
@@ -106,6 +115,42 @@ const List = styled.ul`
     .listBorder::before {
       content: none;
     }
+  }
+`;
+
+const CLIST = styled.ul`
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  z-index: 1000;
+  margin-top: 30px;
+  background: linear-gradient(to top, black, #3b2349);
+
+  border-radius: 10px;
+  li {
+    list-style-type: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .childli {
+    margin-top: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding-right: 5px;
+    color: #ff9e44;
+  }
+  a {
+    color: #ff9e44;
+  }
+  .last {
+    display: none;
+  }
+  @media (max-width: 912px) {
+    height: auto;
+    display: none;
+    width: 100%;
+    border-radius: 0px;
+    top: 0;
   }
 `;
 const Toggle = styled.div`
@@ -120,10 +165,20 @@ const Toggle = styled.div`
 `;
 const Navbar = () => {
   const [yes, setYes] = useState(false);
+  const [showHover, setShowHover] = useState(false);
+  const handleShow = () => {
+    if (showHover === true) {
+      setShowHover(false);
+    }
+    //  else if (showHover === false) {
+    //   setShowHover(true);
+    // }
+  };
+  typeof window !== "undefined" && window.addEventListener("click", handleShow);
+
   const handle = () => {
     yes ? setYes(false) : setYes(true);
   };
-
   return (
     <>
       <Main>
@@ -132,27 +187,70 @@ const Navbar = () => {
         </Logo>
         <ListContainer>
           <List yes={yes}>
-            {/* <Link> */}
             <li className="listBorder">
               <a href="/assets/litepaper.pdf" alt="alt text" target="_blank">
                 Pitch Deck
               </a>
             </li>
-            {/* </Link> */}
+
             <Link href="#corefeatures" passHref>
               <li className="listBorder">
                 <a>Core Features</a>
               </li>
             </Link>
-            <li className="listBorder"> Comparison</li>
             <Link href="#team" passHref>
               <li className="listBorder">
                 <a>Venture</a>
               </li>
             </Link>
-            <li className="listBorder">
-              <a>Advisors</a>
-            </li>
+            <Link href="#coverage" passHref>
+              <li className="listBorder">
+                <a>Coverage</a>
+              </li>
+            </Link>
+            {typeof window !== "undefined" && window.innerWidth < 912 && (
+              <>
+                <Link className="last" href="#faqs" passHref>
+                  <li className="listBorder last">
+                    <a className="last">FAQs</a>
+                  </li>
+                </Link>
+                <Link className="last" href="#roadmap" passHref>
+                  <li className="listBorder last">
+                    <a className="last">RoadMap</a>
+                  </li>
+                </Link>
+              </>
+            )}
+
+            {typeof window !== "undefined" && window.innerWidth > 912 && (
+              <li
+                className="listBorder more"
+                onMouseEnter={() => !showHover && setShowHover(true)}
+              >
+                More
+                {/* <FontAwesomeIcon
+                  style={{ marginLeft: "5px" }}
+                  icon={faAngleDown}
+                /> */}
+                {showHover && (
+                  <CLIST>
+                    <Link href="#faqs" passHref>
+                      <li className="childli">FAQs</li>
+                    </Link>
+
+                    <Link href="#roadmap" passHref>
+                      <li className="childli">
+                        <a>RoadMap</a>
+                      </li>
+                    </Link>
+                    <Link href="#faqs" passHref>
+                      <li className="childli">About</li>
+                    </Link>
+                  </CLIST>
+                )}
+              </li>
+            )}
           </List>
         </ListContainer>
         <Toggle>

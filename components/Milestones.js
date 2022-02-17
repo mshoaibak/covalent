@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
 import VV from "../assets/images/neww.png";
-// import VV from "../assets/images/pkr.PNG";
-// import VV from "../assets/images/kj.PNG";
 
 const Main = styled.div`
   background-color: #3b2349;
@@ -69,7 +67,7 @@ const MilesData = styled.div`
 const Milestones = () => {
   return (
     <>
-      <Main>
+      <Main id="roadmap">
         <H1>ROADMAP</H1>
 
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>

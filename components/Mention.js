@@ -1,13 +1,5 @@
 import Image from "next/image";
 import styled from "styled-components";
-import VV from "../assets/images/vvc.svg";
-import altcoin from "../assets/images/altcoin.png";
-import amb from "../assets/images/amb.png";
-import btc from "../assets/images/btc.png";
-import coin from "../assets/images/coin.png";
-import finance from "../assets/images/finance.png";
-import zcrypto from "../assets/images/zcrypto.png";
-import bitcoin from "../assets/images/bitcoin.png";
 import { mentions } from "../assets/data/mentions";
 import { useState } from "react";
 
@@ -78,17 +70,15 @@ const Mention = () => {
   const [scroll, setScroll] = useState(false);
   return (
     <>
-      <Main>
+      <Main id="coverage">
         <H1>EXCLUSIVE COVERAGE</H1>
         <Mention1 scroll={scroll}>
-          {mentions.map((val) => {
+          {mentions.map((val, indx) => {
             return (
-              <>
-                <div style={{ margin: "40px 0" }}>
-                  <H6>{val.info}</H6>
-                  <Image src={val.image} alt="mention-image" />
-                </div>
-              </>
+              <div key={indx} style={{ margin: "40px 0" }}>
+                <H6>{val.info}</H6>
+                <Image src={val.image} alt="mention-image" />
+              </div>
             );
           })}
         </Mention1>

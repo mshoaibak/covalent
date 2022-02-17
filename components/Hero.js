@@ -79,6 +79,7 @@ const HeroRight = styled.div`
   width: 50%;
   // height: 50vh;
   display: flex;
+  // z-index: 1;
   justify-content: center;
   // border: 1px solid yellow;
   align-items: center;
@@ -144,7 +145,6 @@ const BannerImage = styled.div`
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  // border: 1px solid green;
 `;
 
 const H1 = styled.h3`
