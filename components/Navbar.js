@@ -55,7 +55,7 @@ const List = styled.ul`
   display: ${({ yes }) => (yes ? "block" : "flex")};
   justify-content: space-evenly;
   li {
-    margin: 0;
+    // margin: 0;
     list-style-type: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -123,7 +123,7 @@ const CLIST = styled.ul`
   width: 120px;
   position: absolute;
   z-index: 1000;
-  margin-top: 30px;
+  margin-top: 25px;
   background: linear-gradient(to top, black, #3b2349);
 
   border-radius: 10px;
@@ -227,6 +227,10 @@ const Navbar = () => {
               <li
                 className="listBorder more"
                 onMouseEnter={() => !showHover && setShowHover(true)}
+
+                // onClick={() =>
+                //   showHover ? setShowHover(false) : setShowHover(true)
+                // }
               >
                 More
                 {/* <FontAwesomeIcon
@@ -234,7 +238,7 @@ const Navbar = () => {
                   icon={faAngleDown}
                 /> */}
                 {showHover && (
-                  <CLIST>
+                  <CLIST onMouseLeave={() => showHover && setShowHover(false)}>
                     <Link href="#faqs" passHref>
                       <li className="childli">FAQs</li>
                     </Link>
@@ -244,9 +248,9 @@ const Navbar = () => {
                         <a>RoadMap</a>
                       </li>
                     </Link>
-                    <Link href="#faqs" passHref>
+                    {/* <Link href="#faqs" passHref>
                       <li className="childli">About</li>
-                    </Link>
+                    </Link> */}
                   </CLIST>
                 )}
               </li>
