@@ -14,6 +14,25 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
+
+  @media (max-height: 915px) {
+    margin-top: -2px;
+  }
+  @media (max-height: 1180px) {
+    margin-top: -5px;
+  }
+  @media (max-height: 851px) {
+    margin-top: -1px;
+  }
+  @media (max-height: 740px) {
+    margin-top: -4px;
+  }
+  @media (max-height: 720px) {
+    margin-top: -6px;
+  }
+  @media (max-height: 667px) {
+    margin-top: -2px;
+  }
 `;
 
 const H1 = styled.h1`

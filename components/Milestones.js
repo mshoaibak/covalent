@@ -6,11 +6,12 @@ const Main = styled.div`
   background-color: #3b2349;
   background-image: linear-gradient(to top, black, #3b2349);
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
+  padding: 57px 0;
   text-align: center;
   color: white;
   margin: -2px 0;
-
+  width: 100%;
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
