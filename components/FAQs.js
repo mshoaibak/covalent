@@ -21,6 +21,7 @@ const Main = styled.div`
   background: linear-gradient(to top, #3b2349, black);
   padding: 20px 0;
   margin: -15px 0;
+  position: relative;
   color: white;
   display: flex;
   justify-content: center;

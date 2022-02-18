@@ -24,14 +24,24 @@ const Main = styled.div`
   @media (max-height: 851px) {
     margin-top: -1px;
   }
+  @media (max-height: 800px) {
+    margin-top: -5px;
+  }
   @media (max-height: 740px) {
     margin-top: -4px;
   }
   @media (max-height: 720px) {
     margin-top: -6px;
   }
+
   @media (max-height: 667px) {
     margin-top: -2px;
+  }
+  @media (max-height: 653px) {
+    margin-top: -20px;
+  }
+  @media (max-height: 600px) {
+    margin-top: -14px;
   }
 `;
 

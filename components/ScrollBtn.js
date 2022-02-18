@@ -14,6 +14,9 @@ const ScrollButton = styled.div`
   z-index: 1;
   cursor: pointer;
   color: #ff9e44;
+  @media (max-width: 912px) {
+    left: 85%;
+  }
 `;
 
 const ScrollBtn = () => {
