@@ -28,7 +28,7 @@ const Main = styled.div`
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
-  outline: 1px solid yellow;
+  // outline: 1px solid yellow;
   @media (max-height: 667px) {
     margin-top: -2px;
   }
@@ -36,7 +36,7 @@ const Main = styled.div`
 
 const H1 = styled.h1`
   text-align: center;
-  outline: 1px solid red;
+  // outline: 1px solid red;
 
   font-size: 3rem;
   letter-spacing: 1px;
@@ -51,20 +51,20 @@ const H1 = styled.h1`
 const Faqs = styled.div`
   width: 80%;
   margin: 0 auto;
-  outline: 1px solid white;
+  // outline: 1px solid white;
 `;
 const Question = styled.div`
   display: flex;
-  border: 1px solid green;
+  // border: 1px solid green;
 
   justify-content: space-between;
-  padding: 10px 20px;
+  // padding: 10px 20px;
   cursor: pointer;
 `;
 const QP = styled.p`
   font-size: 1.2rem;
   font-weight: bold;
-  border: 1px solid blue;
+  // border: 1px solid blue;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -76,6 +76,7 @@ const AP = styled.p`
   animation: ${fadeAnimation};
   animation-duration: 0.2s;
   animation-timing-function: ease-in;
+
   font-size: 1rem;
   color: #ff9e44;
   font-size: 1rem;
