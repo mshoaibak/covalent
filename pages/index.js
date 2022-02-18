@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <title>Covalent</title>
         <meta name="description" content="covalent home" />
-        <link rel="icon" href="/titleImg.png" />
+        <link rel="icon" href="/titleImgg.png" />
       </Head>
 
       <main>
