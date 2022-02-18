@@ -195,7 +195,7 @@ const Navbar = () => {
 
             <Link href="#corefeatures" passHref>
               <li className="listBorder">
-                <a>Core Features</a>
+                <a>Features</a>
               </li>
             </Link>
             <Link href="#team" passHref>
